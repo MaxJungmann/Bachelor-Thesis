@@ -10,12 +10,15 @@ Fortunately, the main idea of the algorithm can be summarized in a single image 
 
 The feasible set of the problem is a convex set (e.g. a convex ellipse). Moreover, an outer **polyhedral approximation** of this set (e.g. given by box constraints) as well as a strictly feasible point (all blue) are known. In each iteration a linear program over the outer polyhedral approximation is solved yielding an optimal vertex solution (yellow). If this vertex is not feasible for the original problem, a cutting plane (black) is computed that cuts off this vertex but nothing of the actual feasible set. The point on the boundary (black) is the new guess of an approximate solution. 
 
+<p align="center">
 <img src="/Plots_README/plot_supporting_hyperplane_method.png" alt="" width="400"/>
-
+</p>
 
 After several iterations one may get the following image.
 
+<p align="center">
 <img src="/Plots_README/plot_termination_of_supporting_hyperplane_method.png" alt="" width="400"/>
+</p>
 
 ## Benders decomposition
 Another common problem type in stochastic linear programming are so called **two-stage models**. Here a recourse action is allowed in order to compensate a possibly disadvantageous decision due to the random problem data.
